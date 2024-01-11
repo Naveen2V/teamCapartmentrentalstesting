@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,14 @@ public class AdminPageTestCaes {
         driver.get("http://127.0.0.1:5500/TimeTrackerfe/Login.html");
     }
     @Test
+    @Tag("adminlogin")
+    public void log(){
+        driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("12345");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.findElement(By.id("username")).equals("Vishnu");
+    }
 
 
     @AfterEach
