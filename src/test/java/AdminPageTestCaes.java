@@ -52,6 +52,12 @@ public class AdminPageTestCaes {
 
     @Test
     @Tag("Admin User Control over Apartment Availability")
+    public void log4() {
+        driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("12345");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
 
     @Test
     @Tag("adminlogout")
