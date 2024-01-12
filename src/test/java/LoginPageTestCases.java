@@ -15,7 +15,7 @@ public class LoginPageTestCases {
         driver.get("http://127.0.0.1:5500/TimeTrackerfe/Login.html");
     }
     @Test
-    @Tag("adminlogin")
+    @Tag("Admin Login Functionality and Username Display")
     public void log(){
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
@@ -25,17 +25,7 @@ public class LoginPageTestCases {
     }
 
     @Test
-    @Tag("userlogin")
-    public void log1(){
-        driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
-        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishn");
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("1234");
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-        driver.findElement(By.id("username")).equals("Vishn");
-    }
-
-    @Test
-    @Tag("userreg")
+    @Tag("New User Registration")
     public void log2(){
         driver.findElement(By.xpath("//a[normalize-space()='Sign Up']")).click();
         driver.findElement(By.xpath("//input[@id='firstname']")).sendKeys("sam");
@@ -47,6 +37,15 @@ public class LoginPageTestCases {
         driver.findElement(By.id("username")).equals("Vishnu");
     }
 
+    @Test
+    @Tag("Registered User Login and Username Display")
+    public void log1(){
+        driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishn");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("1234");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.findElement(By.id("username")).equals("Vishn");
+    }
     @AfterEach
     public void tearDown() {
         try {

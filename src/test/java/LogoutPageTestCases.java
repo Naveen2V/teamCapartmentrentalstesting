@@ -14,7 +14,7 @@ public class LogoutPageTestCases {
         driver.get("http://127.0.0.1:5500/TimeTrackerfe/Login.html");
     }
     @Test
-    @Tag("adminlogout")
+    @Tag("Logout Functionality for Admin ")
     public void log() {
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
@@ -22,7 +22,7 @@ public class LogoutPageTestCases {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
     @Test
-    @Tag("userlogout")
+    @Tag("Logout Functionality for Registered Users")
     public void log1() {
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");

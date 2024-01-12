@@ -14,7 +14,7 @@ public class RequestTestCases {
         driver.get("http://127.0.0.1:5500/TimeTrackerfe/Login.html");
     }
     @Test
-    @Tag("Reqstatdis")
+    @Tag("Request Status Display for Registered Users")
     public void log() {
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
@@ -23,7 +23,7 @@ public class RequestTestCases {
         driver.findElement(By.id("username")).equals("Vishnu");
     }
     @Test
-    @Tag("adminlogout")
+    @Tag("Request Management and Notification Functionality")
     public void log1() {
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
@@ -32,7 +32,7 @@ public class RequestTestCases {
         driver.findElement(By.id("username")).equals("Vishnu");
     }
     @Test
-    @Tag("adminlogout")
+    @Tag("Request Management and Notification Functionality")
     public void log2() {
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
@@ -41,7 +41,7 @@ public class RequestTestCases {
         driver.findElement(By.id("username")).equals("Vishnu");
     }
     @Test
-    @Tag("adminlogout")
+    @Tag("Registered User Ability to Choose Apartment and Send Rental Request with Comments")
     public void log3() {
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
@@ -50,7 +50,7 @@ public class RequestTestCases {
         driver.findElement(By.id("username")).equals("Vishnu");
     }
     @Test
-    @Tag("adminlogout")
+    @Tag("Registered User Ability to View Rental Request Status")
     public void log4() {
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");

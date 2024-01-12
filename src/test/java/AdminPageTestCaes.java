@@ -14,7 +14,7 @@ public class AdminPageTestCaes {
         driver.get("http://127.0.0.1:5500/TimeTrackerfe/Login.html");
     }
     @Test
-    @Tag("adminlogin")
+    @Tag("Access Restrictions for Edit Functionality")
     public void log(){
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
@@ -22,6 +22,53 @@ public class AdminPageTestCaes {
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         driver.findElement(By.id("username")).equals("Vishnu");
     }
+
+    @Test
+    @Tag("ccess to Administrator-Specific Menus as admin")
+    public void log1() {
+        driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("12345");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
+    @Test
+    @Tag("Access to Administrator-Specific Menus as user")
+    public void log2() {
+        driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("12345");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
+    @Test
+    @Tag("Access to Registered User Details")
+    public void log3() {
+        driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("12345");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
+    @Test
+    @Tag("Admin User Control over Apartment Availability")
+    public void log4() {
+        driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("12345");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
+    @Test
+    @Tag("adminlogout")
+    public void log5() {
+        driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
+        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("12345");
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
+
 
 
     @AfterEach
