@@ -12,7 +12,7 @@ public class LoginPageTestCases {
     @BeforeEach
     public void setUp(){
 
-        driver.get("http://127.0.0.1:5500/TimeTrackerfe/Login.html");
+        driver.get("http://localhost:8080/ApartmentRentalSystem/Login.jsp");
     }
     @Test
     @Tag("Admin Login Functionality and Username Display")
