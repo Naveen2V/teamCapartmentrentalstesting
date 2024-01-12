@@ -42,7 +42,7 @@ public class AdminPageTestCaes {
     }
 
     @Test
-    @Tag("Access to Registered User Details")
+
     public void log3() {
         driver.findElement(By.xpath("//a[normalize-space()='Log In']")).click();
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys("Vishnu");
